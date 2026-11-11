@@ -136,7 +136,7 @@ def cmd_setup(args) -> int:
         shadowed = [k for k, v in updates.items() if v and plugin.get(k) not in (None, v)]
         if shadowed:
             print(f"note: the plugin settings set {shadowed} differently and take precedence; "
-                  "change them via /plugin → loom → Configure")
+                  "change them with /plugin configure loom@loom-skill")
     if not args.skip_browser and not _playwright_ready():
         print("installing Playwright Chromium (one-time, ~150 MB)…")
         subprocess.run([sys.executable, "-m", "playwright", "install", "chromium"], check=True)

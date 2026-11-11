@@ -7,7 +7,7 @@ f="$dir/plugin.env"
 umask 077
 mkdir -p "$dir" || exit 0
 {
-  echo "# written by the loom plugin at session start; edit via /plugin, not here"
+  echo "# written by the loom plugin at session start; edit with /plugin configure loom@loom-skill"
   [ -n "$CLAUDE_PLUGIN_OPTION_FISH_REFERENCE_ID" ] && printf 'FISH_REFERENCE_ID=%s\n' "$CLAUDE_PLUGIN_OPTION_FISH_REFERENCE_ID"
   [ -n "$CLAUDE_PLUGIN_OPTION_FISH_API_KEY" ] && printf 'FISH_API_KEY=%s\n' "$CLAUDE_PLUGIN_OPTION_FISH_API_KEY"
   [ -n "$CLAUDE_PLUGIN_OPTION_FISH_MODEL" ] && printf 'FISH_MODEL=%s\n' "$CLAUDE_PLUGIN_OPTION_FISH_MODEL"

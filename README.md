@@ -18,7 +18,7 @@ In Claude Code:
 /plugin install loom@loom-skill
 ```
 
-When you enable it, Claude Code asks for your settings:
+Then enter your settings with `/plugin configure loom@loom-skill`:
 
 | Setting | What to enter |
 |---|---|
@@ -28,7 +28,9 @@ When you enable it, Claude Code asks for your settings:
 
 Start a new session after configuring, then run `/loom:setup`. It installs
 the headless browser (~150 MB, once), checks FFmpeg, and confirms your voice
-model. To change settings later, use `/plugin` → **loom** → **Configure**.
+model. Change settings any time with `/plugin configure loom@loom-skill`.
+From a shell, `claude plugin install loom@loom-skill --config fish_reference_id=<ID>`
+works too.
 
 **Requirements:**
 - [uv](https://docs.astral.sh/uv/) (`curl -LsSf https://astral.sh/uv/install.sh | sh`). The plugin's Python environment is created automatically on first use.
