@@ -1,5 +1,17 @@
 # Loom: narrated demo videos for Claude Code
 
+**Install** (run inside Claude Code):
+
+```
+/plugin marketplace add ahmadrashad1/loom-skill
+/plugin install loom@loom-skill
+/plugin configure loom@loom-skill
+```
+
+The last command asks for your Fish Audio voice model ID and API key. Then
+start a new session and run `/loom:setup`. Details are under
+[Install](#install).
+
 A Claude Code plugin that makes Loom-style walkthrough videos for you. Describe
 the demo, approve the plan, and get back a captioned 1080p MP4: performed in
 a real browser and narrated in **your own cloned voice** (Fish Audio). No
