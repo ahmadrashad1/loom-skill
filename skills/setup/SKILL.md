@@ -15,9 +15,8 @@ what's missing.
    their own voice; the ID is the hex string in the model page URL. Never
    suggest or reuse anyone else's voice ID.
 2. **API key.** If `FISH_API_KEY` isn't set, the best option is the plugin
-   settings dialog, where the key is masked and kept in secure storage: tell
-   the user to open `/plugin`, choose **loom → Configure**, fill in the
-   fields, then start a new session (settings sync at session start). The
+   settings dialog, where the key is masked and kept in secure storage: tell the user to run
+   `/plugin configure loom@loom-skill`, fill in the fields, then start a new session (settings sync at session start). The
    voice model ID can be entered there too. Don't ask them to paste the key
    into chat. If they paste it anyway, use it, and tell them it is now in the
    chat history.
