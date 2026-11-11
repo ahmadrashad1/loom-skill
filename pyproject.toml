@@ -1,0 +1,37 @@
+[project]
+name = "loom"
+version = "0.1.0"
+description = "Automated narrated screen demos: Claude Code + Playwright + Fish Audio + FFmpeg"
+readme = "README.md"
+authors = [
+    { name = "ahmadrashad1" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.28.1",
+    "playwright>=1.65.0",
+    "pydantic>=2.14.3",
+    "python-dotenv>=1.2.4",
+    "pyyaml>=6.0.3",
+]
+
+[project.optional-dependencies]
+obs = [
+    "obsws-python>=1.8.1",
+]
+
+[project.scripts]
+loom = "loom.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[tool.pytest.ini_options]
+markers = ["slow: launches a browser and renders video"]
+testpaths = ["tests"]

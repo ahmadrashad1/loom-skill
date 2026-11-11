@@ -1,0 +1,14 @@
+{
+  "name": "loom-skill",
+  "description": "Narrated demo videos in your own cloned voice, made by Claude Code.",
+  "owner": { "name": "ahmadrashad1", "url": "https://github.com/ahmadrashad1" },
+  "plugins": [
+    {
+      "name": "loom",
+      "source": "./",
+      "description": "Plan, perform, narrate (Fish Audio voice clone) and render Loom-style demo videos.",
+      "category": "productivity",
+      "tags": ["video", "demo", "voice"]
+    }
+  ]
+}

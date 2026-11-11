@@ -1,0 +1,31 @@
+{
+  "name": "loom",
+  "displayName": "Loom",
+  "version": "0.1.0",
+  "description": "Narrated Loom-style demo videos: Claude plans and performs the demo in a real browser, Fish Audio speaks it in your cloned voice, FFmpeg renders a captioned 1080p MP4.",
+  "author": { "name": "ahmadrashad1", "url": "https://github.com/ahmadrashad1" },
+  "homepage": "https://github.com/ahmadrashad1/loom-skill",
+  "repository": "https://github.com/ahmadrashad1/loom-skill",
+  "license": "MIT",
+  "keywords": ["video", "demo", "screen-recording", "tts", "voice-clone", "playwright", "ffmpeg", "fish-audio"],
+  "userConfig": {
+    "fish_reference_id": {
+      "type": "string",
+      "title": "Fish Audio voice model ID",
+      "description": "ID of YOUR cloned voice model on fish.audio (open the model page; the ID is in the URL). Only use a voice you own or have permission to use.",
+      "required": true
+    },
+    "fish_api_key": {
+      "type": "string",
+      "title": "Fish Audio API key",
+      "description": "From fish.audio → Developers → API keys. Leave blank if FISH_API_KEY is already set in your environment.",
+      "sensitive": true
+    },
+    "fish_model": {
+      "type": "string",
+      "title": "Fish Audio speech model",
+      "description": "s2.1-pro (paid API credit) or s2.1-pro-free (free developer tier).",
+      "default": "s2.1-pro"
+    }
+  }
+}

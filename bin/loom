@@ -1,0 +1,13 @@
+#!/bin/sh
+# Runs the loom CLI bundled with this plugin. The Python environment lives in
+# ~/.cache/loom/venv so it survives plugin updates; uv creates it on first use.
+self="$(readlink -f "$0" 2>/dev/null || echo "$0")"
+ROOT="$(cd "$(dirname "$self")/.." && pwd)"
+if ! command -v uv >/dev/null 2>&1; then
+  echo "loom needs uv (https://docs.astral.sh/uv/). Install it with:" >&2
+  echo "  curl -LsSf https://astral.sh/uv/install.sh | sh" >&2
+  exit 127
+fi
+UV_PROJECT_ENVIRONMENT="${UV_PROJECT_ENVIRONMENT:-${XDG_CACHE_HOME:-$HOME/.cache}/loom/venv}"
+export UV_PROJECT_ENVIRONMENT
+exec uv run --quiet --frozen --no-dev --project "$ROOT" loom "$@"

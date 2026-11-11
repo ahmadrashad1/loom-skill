@@ -1,0 +1,24 @@
+# AI Loom settings. Secrets live in .env, never here.
+voice:
+  tts_provider: fish        # fish | espeak (offline preview) | silent (dry run)
+  fish_model: s2.1-pro      # s2.1-pro | s2-pro | s1 | s2.1-pro-free
+  fish_speed: 1.0           # 0.5 – 2.0
+  fish_latency: normal      # normal | balanced | low
+
+recording:
+  recorder: playwright      # playwright (browser, headless) | obs (full desktop)
+  headless: true
+  obs_host: localhost
+  obs_port: 4455
+
+video:
+  width: 1920
+  height: 1080
+  fps: 30
+  crf: 18
+  preset: medium
+  audio_bitrate: 192k
+  loudness_i: -16.0         # LUFS target for narration
+  loudness_tp: -1.5         # true-peak ceiling (prevents clipping)
+  captions: soft            # soft (embedded track) | burn | none
+  fade_s: 0.4
